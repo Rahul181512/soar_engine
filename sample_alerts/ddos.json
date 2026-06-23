@@ -1,0 +1,9 @@
+{
+  "alert_type": "DDoS",
+  "source_ip": "203.0.113.99",
+  "severity": "critical",
+  "timestamp": "2026-06-22T10:15:00Z",
+  "description": "High volume traffic detected on port 80. Possible DDoS attack.",
+  "destination_ip": "10.0.0.1",
+  "port": 80
+}

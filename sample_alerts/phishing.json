@@ -1,0 +1,9 @@
+{
+  "alert_type": "Phishing",
+  "source_ip": "198.51.100.42",
+  "severity": "medium",
+  "timestamp": "2026-06-22T10:10:00Z",
+  "description": "Phishing email link clicked by user. Credential harvesting suspected.",
+  "destination_ip": null,
+  "port": null
+}

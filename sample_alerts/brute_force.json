@@ -1,0 +1,9 @@
+{
+  "alert_type": "Brute Force",
+  "source_ip": "45.67.89.10",
+  "severity": "high",
+  "timestamp": "2026-06-22T10:00:00Z",
+  "description": "Multiple failed SSH login attempts detected from external IP.",
+  "destination_ip": "192.168.1.50",
+  "port": 22
+}

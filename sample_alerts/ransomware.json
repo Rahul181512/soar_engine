@@ -1,0 +1,9 @@
+{
+  "alert_type": "Ransomware",
+  "source_ip": "185.220.101.45",
+  "severity": "critical",
+  "timestamp": "2026-06-22T10:20:00Z",
+  "description": "Ransomware encryption activity detected. Multiple files being encrypted.",
+  "destination_ip": "192.168.1.100",
+  "port": 445
+}

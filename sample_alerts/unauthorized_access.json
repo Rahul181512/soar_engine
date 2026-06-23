@@ -1,0 +1,9 @@
+{
+  "alert_type": "Unauthorized Access",
+  "source_ip": "91.108.56.23",
+  "severity": "high",
+  "timestamp": "2026-06-22T10:25:00Z",
+  "description": "Unauthorized access attempt to admin panel detected from external IP.",
+  "destination_ip": "10.0.0.5",
+  "port": 8080
+}
