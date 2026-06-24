@@ -28,7 +28,6 @@ def block_ip(ip: str) -> dict:
             soar_logger.warning(
                 f"IP already blocked | IP: {ip}"
             )
-
             return {
                 "action": "block_ip",
                 "status": "already_blocked",
@@ -56,7 +55,6 @@ def block_ip(ip: str) -> dict:
         soar_logger.exception(
             f"Failed to block IP | IP: {ip}"
         )
-
         raise ValueError("IP blocking failed")
 
 
@@ -75,7 +73,6 @@ def isolate_host(host: str) -> dict:
             soar_logger.warning(
                 f"Host already isolated | Host: {host}"
             )
-
             return {
                 "action": "isolate_host",
                 "status": "already_isolated",
@@ -103,7 +100,6 @@ def isolate_host(host: str) -> dict:
         soar_logger.exception(
             f"Failed to isolate host | Host: {host}"
         )
-
         raise ValueError("Host isolation failed")
 
 
@@ -137,9 +133,7 @@ def execute_playbook(alert: NormalizedAlert) -> dict:
             result = {
                 "action": "notify_analyst",
                 "status": "success",
-                "message": (
-                    "Analyst notification generated."
-                )
+                "message": "Analyst notification generated."
             }
 
         elif alert.risk_level == RiskLevel.HIGH:
@@ -152,9 +146,7 @@ def execute_playbook(alert: NormalizedAlert) -> dict:
             result = {
                 "action": "unknown",
                 "status": "failed",
-                "message": (
-                    "Unable to determine playbook."
-                )
+                "message": "Unable to determine playbook."
             }
 
         alert.action_taken = result["action"]
@@ -172,5 +164,24 @@ def execute_playbook(alert: NormalizedAlert) -> dict:
             f"Playbook execution failed | "
             f"ID: {alert.alert_id}"
         )
-
         raise ValueError("Playbook execution failed")
+
+
+def get_blocked_ips() -> list:
+    """
+    Return list of all currently blocked IPs.
+
+    Returns:
+        list: Blocked IP addresses.
+    """
+    return list(BLOCKED_IPS)
+
+
+def get_isolated_hosts() -> list:
+    """
+    Return list of all currently isolated hosts.
+
+    Returns:
+        list: Isolated host IP addresses.
+    """
+    return list(ISOLATED_HOSTS)

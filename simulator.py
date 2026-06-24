@@ -6,7 +6,7 @@ import requests
 from app.config import settings
 
 # SOAR Engine URL
-BASE_URL = f"http://{settings.HOST}:{settings.PORT}"
+BASE_URL = "http://localhost:8000"
 
 
 # Sample alerts to simulate
